@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==============nav================*/
+#nav ul.outer{
+	border-bottom:2px solid #cc3333;}
+
+/*==============hfsort================*/
+#hfsort div.top{
+	height:140px; 
+	background:url(../images/1ae6f7b349bf33d06a7ab42b49ff3994.png) no-repeat;
+	padding:20px 321px;
+	margin-top:30px;}
+#hfsort div.top div{
+	width:558px;
+	height:107px;
+	background:url(../images/e84dbb88d5bbc42abdd98296ff253dea.png) no-repeat;
+	text-align:center;
+	line-height:107px;
+	font-size:28px;
+	color:#999;
+	font-weight:bold;}
+#hfsort ul{
+	margin-top:20px;}					
+#hfsort ul li{
+	border:1px solid #ccc;}	
+#hfsort ul li a{
+	display:inline-block; 
+	margin:0 10px;
+	color:#666;
+	font-size:12px;}
+#hfsort span{
+	background:#ddd;
+	width:120px;
+	color:#666;
+	font-size:12px;
+	height:100%;
+	text-align:center;
+	margin-right:30px;}				
+#hfsort ul li.one{
+	height:28px;
+	line-height:28px;
+	border-bottom:0;}
+#hfsort ul li.two{
+	height:66px;
+	line-height:33px;
+	border-bottom:0;}
+#hfsort ul li.two span{
+	line-height:66px;}
+#hfsort ul li.three{
+	height:33px;
+	line-height:33px;
+	border-bottom:0;}
+#hfsort ul li.three span{
+	line-height:33px;}
+#hfsort ul li.four{
+	height:99px;
+	line-height:33px;
+	border-bottom:0;}
+#hfsort ul li.four span{
+	line-height:99px;}
+#hfsort ul li.five{
+	height:33px;
+	line-height:33px;
+	border-bottom:0;}
+#hfsort ul li.five span{
+	line-height:33px;}
+#hfsort ul li.five input.in1,#hfsort ul li.five input.in2{
+	height:24px;
+	width:80px;
+	line-height:24px;
+	border:1px solid #ccc;
+	border-radius:5px;}
+#hfsort ul li.five input.in3{
+	margin-left:20px;
+	width:40px;
+	height:24px;
+	border-radius:5px;}
+#hfsort ul li.six{
+	height:36px;
+	line-height:36px;}
+#hfsort ul li.six span{
+	line-height:36px;}
+#hfsort ul li.six input,#hfsort div.bottom input{
+	width:14px;
+	height:14px;
+	border-radius:3px;
+	margin:0 5px;
+	vertical-align:middle;
+	background:#fff;}
+#hfsort div.bottom{
+	margin-top:20px;
+	height:35px;
+	border:1px solid #ccc;
+	line-height:36px;}
+#hfsort div.bottom span{
+	line-height:35px;}
+
+/*==============list================*/
+#list ul{
+	height:3500px;
+	margin-top:30px;}
+#list ul li{
+	height:340px;
+	width:232px;
+	border:1px solid #ccc;
+	padding:10px;
+	margin:5px 4px;}
+#list ul li:hover img{
+	transform:scale(1.08);
+	transition:all .3s linear 0s;}
+#list ul li a.one{
+	display:block;
+	height:212px;
+	width:212px;}
+#list ul li img{
+	height:212px;
+	width:212px;}
+
+#list ul li p{ 
+	margin-top:10px;
+	width:212px;
+	height:24px;
+	color:#c33;
+	font-weight:bold;
+	font-size:16px;}
+#list ul li p span{
+	width:60px;
+	height:18px;
+	border:1px solid #c33;
+	border-radius:2px;
+	color:#c33;
+	line-height:18px;
+	font-size:12px;}
+#list ul li a.two{
+	display:block;
+	height:40px;
+	width:212px;
+	line-height:20px;
+	font-size:14px;
+	margin-top:5px;}
+#list ul li div{
+	margin-top:10px;}
+
+/*==============u-like===============*/
+#u-like{
+	height:1390px;
+	margin-top:50px;}
+#u-like p.tit{
+	height:30px; 
+	font-size:20px; 
+	font-weight:bold; 
+	background: url(../images/renao.png) no-repeat 5px 5px; 
+	padding-left:40px; 
+	line-height:30px;}
+#u-like ul{
+	height:1296px;
+	margin-top:10px;}
+#u-like ul li a{
+	display:block; 
+	border:1px solid #CCC; 
+	padding:15px; 
+	margin-right:5px; 
+	height:314px; 
+	width:232px; 
+	margin-top:10px;}
+#u-like ul li a:hover{
+	box-shadow:0 0 10px 2px #ccc;}	
+#u-like ul li a p.one{
+	height:42px; 
+	line-height:21px; 
+	font-size:14px; 
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	margin-top:10px; 
+	width:212px;}
+#u-like ul li a p.two{
+	width:212px; 
+	height:27px; 
+	margin-top:10px; 
+	font-size:16px; 
+	color:#cc3333; 
+	font-weight:bold;}
+p.tit span.title{
+	font-weight:100;
+	padding-right:20px; 
+	background: url(../images/jiantou.png) no-repeat 50px 6px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

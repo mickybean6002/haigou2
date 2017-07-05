@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS Document */
+/*===========样式重置============*/
+body,h1,h2,h3,h4,h5,h6,p,ul,li,img,a,input,ol,dl,dt,dd{ padding:0; margin:0;}
+ul,ol{ list-style:none}
+img{ border:0; display:block;}
+input{ outline:none;}
+
+*{ box-sizing:border-box;}
+body{ font-size:14px; color:#3e3e3e; font-family:"微软雅黑";}
+
+a{ text-decoration:none; color:#383838;}
+a:hover{ color:#cc3333;}
+
+/*=============解决兼容性=============*/
+header,footer,nav,figure,figcaption,aside,article,section,main{ display:block;}
+
+/*=============公共样式============*/
+.w{ width:1200px; margin:0 auto; overflow:hidden;}
+.l{ float:left;}
+.r{ float:right;}
+
+/*=============header===========*/
+#header{
+	height:98px;
+	border-bottom:2px solid #c33;}
+#header h1 a{
+	display:block;
+	width:309px;
+	height:63px;
+	background:url(../images/4aa0780b5ffeee46a01f132052fdb71a.png) no-repeat;
+	margin-top:15px;}
+#header ul.r{
+	margin-top:40px;}
+#header ul a{
+	display:block;
+	padding:0 10px;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	color:#999;}
+#header ul li ul.hide1,#header ul li ul.hide2{
+	display:none;}
+#header ul li.one:hover .hide1,#header ul li.two:hover .hide2{
+	display:block;}
+#header ul li.one:hover,#header ul li.two:hover{
+	border:1px solid #666;}
+
+/*=============content===========*/
+#content{
+	height:523px;}
+#content div.top{
+	height:72px;
+	border-bottom:1px solid #ccc;}
+#content div.top a.l{
+	display:block;
+	height:72px;
+	width:149px;
+	border-bottom:2px solid #f04e00;
+	line-height:70px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	color:#f04e00;}
+#content div.top span{
+	display:block;
+	margin-top:40px;}
+#content div.top span a{
+	color:#39F;}
+#content div.bottom{
+	padding:10px 30px 0 30px;}
+#content div.bottom .left p{
+	margin:20px 0 20px 50px;}
+#content div.bottom .left p input{
+	vertical-align:middle;
+	margin-right:10px;}
+#content div.bottom .left a.zhuce{
+	display:block;
+	width:67px;
+	height:30px;
+	background:#f04e00;
+	border:1px solid #C00;
+	line-height:30px;
+	text-align:center;
+	color:#fff;
+	margin:30px 0 0 113px;
+	border-radius:3px;}
+#content div.bottom .left ul li{
+	margin:20px 0;}
+#content div.bottom .left ul li input{
+	width:212px;
+	height:28px;
+	line-height:28px;
+	padding:0 5px;
+	box-shadow:inset 2px 2px 4px #f0f0f0;
+	border-radius:3px;
+	vertical-align:middle;
+	border:1px solid #dadada;
+	border-top: 1px solid #bababa;}
+#content div.bottom .left ul li div{
+	height:28px;
+	text-align:right;
+	display:inline-block;
+	width:105px;
+	margin-right:5px;}
+#content div.bottom .left ul li div span{
+	color:#f04e00;}	
+#content div.bottom .left ul li.two input,#content div.bottom ul li.three input{
+	width:102px;}
+#content div.bottom .left ul li.three input:nth-child(3){
+	background:#8fa0ab;
+	text-align:center;
+	color:#fff;
+	box-shadow:inset 0 0 0 0 #eee;
+	width:86px;
+	height:30px;
+	line-height:30px;}
+#content div.bottom .right{
+	height:390px;
+	width:252px;
+	padding:30px 0 0 50px;
+	background:url(../images/49694f08c5a1502bc7993f9367d5a441.png) no-repeat;
+	font-size:12px;
+	color:#666;}
+#content div.bottom .right ul{
+	margin-top:10px;
+	border:1px solid #eee;
+	width:192px;
+	height:106px;}
+#content div.bottom .right ul a{
+	display:block;
+	width:190px;
+	height:35px;
+	padding:5px;
+	line-height:23px;
+	border-bottom:1px dotted #eee;
+	color:#666;}
+#content div.bottom .right ul li:nth-child(1) span{
+	display:inline-block;
+	width:24px;
+	height:21px;
+	background:url(../images/d50e308ab6557dead5473e95d8901975.png) no-repeat -85px -235px;
+	vertical-align:middle;
+	margin-right:5px;}
+#content div.bottom .right ul li:nth-child(2) span{
+	display:inline-block;
+	width:24px;
+	height:16px;
+	background:url(../images/d50e308ab6557dead5473e95d8901975.png) no-repeat -62px -235px;
+	vertical-align:middle;
+	margin-right:5px;}
+#content div.bottom .right ul li:nth-child(3) span{
+	display:inline-block;
+	width:24px;
+	height:20px;
+	background: url(../images/bfdb5897258b551e046ea2fbc433c70b.png) no-repeat;
+	vertical-align:middle;
+	margin-right:5px;}
+/*=============footer=============*/
+#footer p{
+	color:#666;
+	text-align:center;
+	font-size:12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
