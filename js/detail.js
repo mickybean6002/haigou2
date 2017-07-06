@@ -1,5 +1,6 @@
 window.onload=function(){
 	bigger();
+	
 }
 function $(id){
 	return document.getElementById(id);

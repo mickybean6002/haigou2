@@ -298,6 +298,22 @@
     font-size: 16px;
     line-height: 45px;
     text-align: center;}
+#detail .goods .con ul.discuss li{
+    padding: 20px 0;
+    border-top: 1px solid #dedede;}
+#detail .goods .con ul.discuss li img{
+	hieght:40px;
+	width: 40px;}
+#detail .goods .con ul.discuss li p{
+	font-size: 14px;
+	margin-left: 60px;
+	height: 24px;
+	line-height: 24px;
+}
+#detail .goods .con ul.discuss li p span{
+	margin:0 20px;
+	color: #999;
+}
 #detail .goods .select{
 	width:928px;
 	height:45px;

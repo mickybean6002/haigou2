@@ -98,7 +98,7 @@
 
 /*==============list================*/
 #list ul{
-	height:3500px;
+	height:2450px;
 	margin-top:30px;}
 #list ul li{
 	height:340px;
@@ -130,8 +130,9 @@
 	border:1px solid #c33;
 	border-radius:2px;
 	color:#c33;
-	line-height:18px;
-	font-size:12px;}
+	line-height:16px;
+	font-size:12px;
+	text-align: center;}
 #list ul li a.two{
 	display:block;
 	height:40px;
@@ -165,7 +166,7 @@
 	width:232px; 
 	margin-top:10px;}
 #u-like ul li a:hover{
-	box-shadow:0 0 10px 2px #ccc;}	
+	box-shadow:0 0 10px 2px #c33;}	
 #u-like ul li a p.one{
 	height:42px; 
 	line-height:21px; 
