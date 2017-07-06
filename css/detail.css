@@ -289,6 +289,15 @@
 	margin-left:17px;}
 #detail .goods .con{
 	padding:30px;}
+#detail .goods .con div.App a{
+	display:block;
+	width:878px;
+	height:45px;
+	background-color: hsla(43,91%,83%,.7);
+    color: #f6934d;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;}
 #detail .goods .select{
 	width:928px;
 	height:45px;
