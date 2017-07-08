@@ -14,7 +14,7 @@ $(function(){
 						if(data=="1"){
 							$(".check").eq(0).html("该手机号已经被注册了");
 						}else{
-							$(".check").eq(0).html("该手机号没有人注册");
+							$(".check").eq(0).html("");
 						}
 					}		
 			});	
@@ -23,16 +23,19 @@ $(function(){
 	
 	
 	$("#testcode").blur(function(){
-		let result2=(/^[a-zA-Z0-9]{4}$/).test($("#testcode").val());
-		if(!result2){
-			$(".check").eq(1).html("请输入4位验证码");
+		let result1=$("#testcode").val();
+		let result2=$("#code").html();
+		if(result2!=result1){
+			$(".check").eq(1).html("请输入正确的验证码");
+		}else{
+			$(".check").eq(1).html("");
 		}
 	})
 	
 	
 	$("#email").blur(function(){
-		let result3=(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test($("#email").val());
-		if(!result3){
+		let result4=(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test($("#email").val());
+		if(!result4){
 			$(".check").eq(2).html("请输入合法邮箱");
 		}else{
 			$.ajax({
@@ -44,7 +47,7 @@ $(function(){
 					if(data=="1"){
 						$(".check").eq(2).html("该邮箱已经被注册了");
 					}else{
-						$(".check").eq(2).html("该邮箱没有人注册");
+						$(".check").eq(2).html("");
 					}
 				}		
 			});	
@@ -53,25 +56,29 @@ $(function(){
 	
 	
 	$("#userpass1").blur(function(){
-		let result4=(/^[a-z0-9_-]{6,18}$/).test($("#userpass1").val());
-		if(!result4){
+		let result5=(/^[a-z0-9_-]{6,18}$/).test($("#userpass1").val());
+		if(!result5){
 			$(".check").eq(3).html("请输入6-18位字母、数字或下划线");
+		}else{
+			$(".check").eq(3).html("");
 		}
 	})
 	
 	
 	$("#userpass2").blur(function(){
-		let result4=$("#userpass1").val();
-		let result5=$("#userpass2").val();
-		if(result5!=result4){
+		let result5=$("#userpass1").val();
+		let result6=$("#userpass2").val();
+		if(result6!=result5){
 			$(".check").eq(4).html("请保持两次输入的密码一致");
-		}		
+		}else{
+			$(".check").eq(4).html("");
+		}
 	})
 	
 	
 	$("#username").blur(function(){
-		let result6=(/^\w{3,16}$/).test($("#username").val());
-		if(!result6){
+		let result7=(/^\w{3,16}$/).test($("#username").val());
+		if(!result7){
 			$(".check").eq(5).html("请输入3-16位字母数字或下划线");
 		}else{
 			$.ajax({
@@ -83,14 +90,28 @@ $(function(){
 					if(data=="1"){
 						$(".check").eq(5).html("该用户名已经被注册了");
 					}else{
-						$(".check").eq(5).html("该用户名还没有人注册");
+						$(".check").eq(5).html("");
 					}
+					
 				}		
 			});	
 		}
 	})
 	
 	
+	var num1="";
+	for(var i=0;i<4;i++){
+		num1+=parseInt(Math.random()*10) 
+	}
+	$("#code").html(num1);
+
+	$("#getcode").click(function(){
+		var num="";
+		for(var i=0;i<4;i++){
+			num+=parseInt(Math.random()*10) 
+		}
+		$("#code").html(num);
+	})
 })
 
 

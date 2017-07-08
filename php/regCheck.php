@@ -3,11 +3,11 @@
 	header("Content-type: text/html; charset=utf-8");
 
 	//1、接收客户端的输入的数据
-	$userPhone = $_GET['phone'];//$_POST:针对post请求方法。
-	$userEmail = $_GET['email'];
-	$userPass = $_GET['userpass1'];
-	$userName = $_GET['username'];
-	$testCode = $_GET['testcode'];
+	//$userPhone = $_GET["userPhone"];
+	//$userEmail = $_GET["userEmail"];
+	//$userPass = $_GET["userpass1"];
+	$userName = $_GET["userName"];
+	//$testCode = $_GET["testcode"];
 	//2、保存到数据库
 	//1)、连接数据库
 	$con = mysql_connect("localhost","root","qianfeng");
@@ -18,6 +18,7 @@
 		//2)、执行SQL语句
 		mysql_select_db("haigou",$con);
 		$str="select * from userTable where userName='".$userName."'";
+		//echo $str;
 		$result = mysql_query($str,$con); //返回的是表格
 		$rowCount = mysql_num_rows($result);
 	

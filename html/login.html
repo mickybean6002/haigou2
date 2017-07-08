@@ -37,11 +37,13 @@
     <div class="r out">
     	<p>洋码头帐户登录<a href="register.html">免费注册</a></p>
         <div class="box">
-        	手机/邮箱 : <input type="text" placeholder="请输入手机/邮箱/用户名" id="name" autofocus/><br/>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码 : <input type="text" placeholder="请输入密码" id="pass"/><br/>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码 : <input type="text" placeholder="验证码" id="test"/><img/>&nbsp;&nbsp;<span>看不清?</span>&nbsp;&nbsp;<a href="#">换张图</a><br/>
+        	手机/邮箱 : <input type="text" placeholder="请输入手机/邮箱/用户名" name="userName" id="name" autofocus/><br/>
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码 : <input type="text" placeholder="请输入密码" name="userPass" id="pass"/><br/>
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码 : <input type="text" placeholder="验证码" id="test"/>
+        	<input type="button" value="获取验证码" id="getcode"/>
+            <span name="code" id="code"></span>
         	<label><input type="checkbox" id="autoload"/>两周内自动登录</label><br/>
-            <a href="../index.html" id="load">登录</a><a href="#">忘记登录</a><br/>
+            <input type="button" id="load" value="登录"/><a href="#">忘记登录</a><br/>
             <a href="http://weibo.com/login.php" id="weibo">微博登录</a><a href="https://www.alipay.com" id="zhi">支付宝账户登录</a><a href="https://wx.qq.com" id="weixin">微信登录</a>
         </div>
     </div>
