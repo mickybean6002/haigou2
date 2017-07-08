@@ -18,7 +18,7 @@ $(function(){
 		$(".t_h").html(h + "时");
 		$(".t_m").html(m + "分");
 		$(".t_s").html(s + "秒");
-}
+	}
 setInterval(GetRTime,0);
 	$("#returnTop").click(function(){
 		let scrollTop=document.documentElement.scrollTop+document.body.scrollTop;

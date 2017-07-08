@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>快来拥有你的海购账号吧</title>
 <link rel="stylesheet" type="text/css" href="../css/register.css">
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>	
+<script type="text/javascript" src="../js/register.js"></script>
 
 </head>
 
@@ -37,43 +39,46 @@
         <span class="r">你是不是想注册为买手？请<a href="#">点击这里</a></span>
     </div>
 	<div class="bottom">
+		<form action="../php/register.php" method="post">
     	<div class="left l">
         	<ul>
             	<li class="one">
                 	<div><span>* </span>手机号码：</div>
-                    <input type="text" placeholder="请输入手机号码" id="phone"/>
-                    <i>请输入合法手机号码</i>
+                    <input type="text" placeholder="请输入手机号码" name="phone" id="phone"/>
+                    <i class="check"></i>
                 </li>
             	<li class="two">
                 	<div><span>* </span>验证码：</div>
-                    <input type="text" placeholder="请输入验证码" id="test1"/>
-                    <i>请输入正确的验证码</i>
+                    <input type="text" placeholder="请输入验证码" name="testcode" id="testcode"/>
+                    <input type="text" name="getcode"/>
+                    <i class="check"></i>
                 </li>
             	<li class="three">
-                	<div><span>* </span>短信验证码：</div>
-                    <input type="text" placeholder="请输入验证码" id="test2"/>
-                    <input type="button" value="获取验证码"/>
-                    <i>请输入正确的验证码</i>
+                	<div><span>* </span>邮箱：</div>
+                    <input type="text" placeholder="请输入邮箱" name="email" id="email"/>
+                    <i class="check"></i>
                 </li>
             	<li class="four">
                 	<div><span>* </span>登录密码：</div>
-                    <input type="text" placeholder="请输入密码" id="pass1"/>
-                    <i>您输入的密码有误</i>
+                    <input type="text" placeholder="请输入密码" name="userpass1" id="userpass1"/>
+                    <i class="check"></i>
                 </li>
             	<li class="five">
                 	<div><span>* </span>确认密码：</div>
-                    <input type="text" placeholder="请输入确认密码" id="pass2"/>
-                    <i>您输入的密码不一致</i>
+                    <input type="text" placeholder="请输入确认密码" name="userpass2" id="userpass2"/>
+                    <i class="check"></i>
                 </li>
             	<li class="six">
                 	<div><span>* </span>用户名：</div>
-                    <input type="text" placeholder="请输入用户名" id="name"/>
-                    <i>您输入的用户名已存在</i>
+                    <input type="text" placeholder="请输入用户名" name="username" id="username"/>
+                    <i class="check"></i>
                 </li>
             </ul>
+            
             <p><input type="checkbox" checked/>我已经认真阅读并同意洋码头的《用户协议》。</p>
-            <a href="login.html" class="zhuce">注册</a>
+            <input type="submit" value="注册" id="zhuce"/>
         </div>
+        </form>
         <div class="right r">
         	<p>您也可以使用下列帐号登录洋码头：</p>
             <ul>
