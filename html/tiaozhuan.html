@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆成功</title>
+	</head>
+	<style>
+	body{
+		background:#394c38 url(../images/naturally0706_01.jpg) no-repeat;
+		background-size:contain;}
+	div{
+		margin:400px auto;
+		font-size: 20px;
+		color: #c1ce7c;
+		width:500px;
+		height:50px;
+		font-weight:200;
+	}
+	div p{
+		text-align:center;
+		font-size:20px;
+		color:#fff;
+		height:20px;}
+	div a{
+		color:#fff;
+		margin-left: 20px;
+	}
+	div a:hover{color:#c1ce7c;}
+	</style>
+	<body>
+		<div>
+			恭喜您！注册成功！快去登陆买买买吧~<a href="login.html">立即去登陆</a>
+            <p></p>
+		</div>
+	</body>
+    <script>
+    	var num=6;
+		var p=document.getElementsByTagName("p");
+		var timer=setInterval(function(){
+			num--;
+			p[0].innerHTML=num;
+			if(num<1){
+				clearInterval(timer);
+				location.href="login.html";
+			}
+		},1000);
+		
+    </script>
+</html>

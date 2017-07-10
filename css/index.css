@@ -3,9 +3,83 @@
 
 /*==============banner================*/
 #banner #bantop{
-	height:400px; 
+	height:400px; /*
 	background:url(../images/CgvUA1kuPwaAadsgAAGZSKWL_8c929_3_1_o.jpg) no-repeat; 
-	background-size:cover;}
+	background-size:cover;*/}
+#banner #bantop	#box{
+        	width: 100%;
+        	height: 400px;
+        	overflow: hidden;
+        	position: relative;
+        	/*box-shadow: #242424 0px 0px 10px;*/
+		}
+#banner #bantop #wrap{
+        	width: 100%;
+        	height: 400px;
+        	position: absolute;
+            left: 0;
+            
+        }
+        
+#banner #bantop #wrap>li,#wrap>li img{
+        	width: 100%;
+        	height: 400px;
+        }
+#banner #bantop #wrap>li {
+        	transition :opacity 1s;
+        	position: absolute;
+     
+        }
+       /* 底部圆圈按钮*/
+#banner #bantop #btn{
+        	z-index: 2;
+        	height: 20px;
+        	position: absolute;
+        	bottom: 1%;
+        	left:50%;
+        	margin-left: -50px;
+        	cursor: pointer;
+        }
+#banner #bantop #btn>li{
+        	width:20px;
+        	height: 100%;
+        	margin:0 5px;
+        	float: left;
+        	border-radius: 50%;	
+        }
+#banner #bantop .ccc{
+        	background: #ccc;
+        }
+#banner #bantop .black{
+        	background: #000;
+        }
+       /* 左右按钮*/
+#banner #bantop span{
+        	position: absolute;
+        	top:50%;
+        	display: block;
+        	width :50px;
+        	height: 80px;
+        	background:#242424;
+        	margin-top:-40px;
+        	z-index: 23;
+        	color: #fff;
+        	font-size: 30px;
+        	line-height: 80px;
+        	text-align: center;
+        	cursor: pointer;
+        	display: none;
+        	
+        }
+#banner #bantop #left{
+        	left:0;
+        }
+#banner #bantop #right{
+        	right: 0;
+        }
+
+
+
 #banner #banbot{
 	background:#f8f8f8;}
 #banner .w ul{
@@ -163,6 +237,7 @@ p.tit span.title{
 	font-size:16px; 
 	color:#fff; 
 	padding:0 10px;}
+#list  ul li:hover{opacity:0.8;background:pink;}
 #list .one ul.l,#list .two ul.l,#list .three ul.l{
 	height:289px; 
 	margin-top:10px; 

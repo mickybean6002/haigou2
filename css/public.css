@@ -34,12 +34,12 @@ a:hover{
 #box1{
 	height:30px; 
 	background:#f8f8f8;}
-#box1 .w p{
+#box1 p{
 	height:30px; 
 	line-height:30px; 
 	color:#646464; 
 	width:150px;}
-#box1 .w ul li a{
+#box1 ul li a{
 	display:block; 
 	height:30px; 
 	line-height:30px; 

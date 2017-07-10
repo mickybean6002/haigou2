@@ -7,7 +7,6 @@
 	$userEmail = $_POST['email'];
 	$userPass = $_POST['userpass1'];
 	$userName = $_POST['username'];
-	$testCode = $_POST['testcode'];
 	//2、保存到数据库
 	//1)、连接数据库
 	$con = mysql_connect("localhost","root","qianfeng");
@@ -17,7 +16,7 @@
 	}else{
 		//2)、执行SQL语句
 		mysql_select_db("haigou",$con);
-		$str="insert into userTable(userName,userPass,userPhone,userEmail,testCode) values('".$userName."','".$userPass."','".$userPhone."','".$userEmail."','".$testCode."')";
+		$str="insert into userTable(userName,userPass,userPhone,userEmail,testCode) values('".$userName."','".$userPass."','".$userPhone."','".$userEmail."')";
 		$count = mysql_query($str,$con); 
 		
 		//3)、关闭数据库

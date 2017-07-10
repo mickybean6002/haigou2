@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+/*==============top================*/
+#top #box2{
+	height:90px;}
+#top #box2 h1 a{
+	display:inline-block;
+	height:57px;
+	width:102px;
+	background:url(../images/84aee968a1da526ead19bed1f6bd63cf.png) no-repeat;
+	margin-top:10px;}
+#top #box2 h1 span{
+	display:inline-block;
+	font-size: 20px;
+    color: #383838;
+    margin-left: 30px;
+	font-weight:100;
+	vertical-align:middle;
+	margin-bottom:30px;}
+#top #box2 ul{
+	height:36px;
+	margin-top:30px;
+	color:#}
+#top #box2 ul li{
+	height:36px;
+	width:198px;
+	text-align:center;
+	line-height:36px;
+	font-size:16px;}		
+#top #box2 ul li:first-child{
+	background:#c33;
+	color:#fff;
+	position:relative;}	
+#top #box2 ul li:nth-child(2){
+	background:#eee;
+	color:#9b9b9b;
+	position:relative;}	
+#top #box2 ul li:nth-child(3){
+	background:#eee;
+	color:#9b9b9b;}	
+#top #box2 ul li span{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	margin-right:5px;
+	background-color: #cecece;
+    color: #f8f8f8;
+    line-height: 20px;
+    margin-right: 6px;
+    text-align: center;}
+#top #box2 ul li:first-child span{
+	background:#fff;
+	color:#c33;}
+#top #box2 ul li:first-child i{
+	display:block;
+	width:0;
+	height:0;
+	border:18px solid #eee;
+	border-left:18px solid #c33;
+	position:absolute;
+	top:0;
+	right:-18px;}	
+#top #box2 ul li:nth-child(2) i{
+	position: absolute;
+    right: -18px;
+    top: 0;
+	background:url(../images/0bd5b1b956d50faf757814791494bc6f.png) no-repeat -166px -79px;
+    width: 18px;
+    height: 36px;
+	display:block;}	
+#top #box3{
+	height:30px;}	
+#top #box3 span{
+	display:block;
+	height:28px;
+	width:163px;
+	border-bottom:2px solid #c33;
+	line-height:28px;
+	text-align:center;
+	color:#c33;
+	font-size:18px;
+	font-weight:bold;}	
+#top #p4{
+	margin-top:10px;
+	color:#9b9b9b;}	
+#top #box5{
+	margin-top:10px;
+	height:40px;
+	border:1px solid #ccc;
+	padding:0 10px;}	
+#top #box5 span{
+	display:inline-block;
+	hieght:38px;
+	line-height:38px;}	
+#top #box5 span:nth-child(1){
+	width:120px;}	
+#top #box5 span:nth-child(2){
+	width:557px;}	
+#top #box5 span:nth-child(3){
+	width:130px;}	
+#top #box5 span:nth-child(4){
+	width:115px;}	
+#top #box5 span:nth-child(5){
+	width:115px;}	
+#top #box5 span:nth-child(6){
+	width:115px;}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

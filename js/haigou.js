@@ -26,10 +26,96 @@
 		$("body").animate({scrollTop:"0px"}, 2000);
 
 	})
+	
+	
+       
+       var btn = document.getElementById("btn").children;//获取底部圆圈
+      
+       /* 右按钮*/
+      var num = 0;
+   
+       ff("right").onclick = function(){
+       	     num++   
+       	     if(num>= ff("wrap").children.length){
+       	     	num=0;
+       	     }
+       	     console.log(num)
+       	   for (var j =0;j<  ff("wrap").children.length;j++) {
+       	   	 
+       	   	 	 ff("wrap").children[j].style.opacity =0;
+     		}
+       	     ff("wrap").children[num].style.opacity =1;
+       	     /*圆按钮*/
+           for (var j =0;j<  ff("wrap").children.length;j++) {
+     			btn[j].className="ccc";
+     			
+     		}
+     		btn[num].className="black";
+       }
+       
+         /* 左按钮*/
+       ff("left").onclick = function(){
+       	   num--;
+       	  
+       	  if(num<0){
+       	     	num=ff("wrap").children.length-1;
+       	     }
+       	  console.log(num)
+       	   for (var j =0;j<  ff("wrap").children.length;j++) {
+       	   	 	
+       	   	 	 ff("wrap").children[j].style.opacity =0;
+     		}
+       	     ff("wrap").children[num].style.opacity =1;
+       	        /*元按钮*/
+           for (var j =0;j<  ff("wrap").children.length;j++) {
+     			btn[j].className="ccc";
+     			
+     		}
+     		btn[num].className="black";
+       }
+       
+      /* 底部小圆圈鼠标移入*/
+     
+     for (var i in btn) {
+     	btn[i].className="ccc";
+     	btn[0].className="black";
+     	btn[i].index = i;
+     	btn[i].onmouseover = function(){
+     		for (var j =0;j<  ff("wrap").children.length;j++) {
+     			btn[j].className="ccc";
+     			 ff("wrap").children[j].style.opacity =0;
+     		}
+     		btn[this.index].className="black";
+     		console.log(this.index)
+     		  ff("wrap").children[this.index].style.opacity =1; 
+     	}
+     }
+    /*让轮播图自己走，设置定时器*/
+    var time = null;  
+   time = setInterval(ff("right").onclick,3000)
+    
+    /* 左右按钮的显示与隐藏*/
+       ff("box").onmouseover= function(){
+       	  ff("left").style.display = "block";
+       	  ff("right").style.display = "block";
+       	  clearInterval(time)
+       	};
+       ff("box").onmouseout = function(){
+       	  ff("left").style.display = "none";
+       	  ff("right").style.display = "none";
+       	  clearInterval(time)
+        time = setInterval(ff("right").onclick,3000);
+         console.log("鼠标移出，打开定时器,自动播放")
+       };
+
 			
 		
 		
 })
+	function ff(id){
+       	return document.getElementById(id);
+       };
+
 	function slide(){	  
 	var after=document.getElementsByClassName("after");
 	var before=document.getElementsByClassName("before");
