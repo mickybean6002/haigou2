@@ -1,8 +1,57 @@
-window.onload=function(){
-	bigger();
+$(function(){
+	var strStoreDate = window.localStorage? localStorage.getItem("userName"): Cookie.read("userName");
+	$("#Login").html("<a href='#'>"+strStoreDate+"</a>");
+	$("#Register").html("");
 	
-}
-function $(id){
+var strStoreDate1= window.localStorage? localStorage.getItem("goodsId"): Cookie.read("goodsId");
+
+	$.ajax({
+				url:"../php/getGoodsInfo.php",
+				async:true,
+				data:"goodsId="+strStoreDate1,
+				type:"get",
+				dataType:"json",
+				success:function(data){
+					let obj=data;
+					let goodsImg=obj.goodsImg;
+					let goodsName=obj.goodsName;
+					let goodsPrice=obj.goodsPrice;
+					let goodsType=obj.goodsType;
+					let str1="<h3>"+goodsName+"</h3><span>"+goodsType+"</span>"
+					$("#goodsname").append(str1);
+					let str2="<p class='p1'>价格:&nbsp;&nbsp; <span>"+goodsPrice+"</span></p><p class='p2'>领券:&nbsp;&nbsp; <span>99-5</span><span>199-10</span><span>399-20</span></p>";
+					$("#goodspirce").append(str2);
+					let str3="<div id='bigbox' style='background-image:url("+goodsImg+");background-size:400px 400px;'><div id='mirror'></div></div>"
+					$("#picturebigger").prepend(str3);
+					let str4="<div id='showbox'><div id='showimg' style='background-image:url("+goodsImg+");background-size:800px 800px;'></div></div>"
+					$("#picturebigger").append(str4);
+					bigger();
+				}		
+			});	
+
+	var counts=$("#counts").val();
+	$id("addgoods").onclick=function(){
+			$.ajax({
+				url:"../php/addShoppingCart.php",
+				async:true,
+				data:"goodsId="+strStoreDate1+"&vipName="+strStoreDate+"&goodsCount="+counts,
+				type:"get",
+				dataType:"json",
+				success:function(data){
+					if(data==1){
+						alert("添加成功");
+					}else{
+						alert("添加失败");
+					}
+				}		
+			});	
+
+		
+	}
+	
+	
+})	
+function $id(id){
 	return document.getElementById(id);
 }
 function bigger(){
@@ -10,9 +59,9 @@ function bigger(){
 	var bigBoxWidth=400;
 	var mirrorDivHeight=150;
 	var bigBoxHeight=400;
-	var bigbox=$("bigbox");
+	var bigbox=$id("bigbox");
 	
-	$("mirror").onmousemove=function(event){
+	$id("mirror").onmousemove=function(event){
 		var eve=event||window.event;
 		var gun=document.documentElement.scrollTop+document.body.scrollTop;
 		//放大镜距离父盒子的宽高
@@ -20,7 +69,7 @@ function bigger(){
 		var top=eve.clientY+gun-bigbox.offsetTop-mirrorDivHeight/2;
 		//放大镜的活动范围
 		var rangeWidth=bigBoxWidth-mirrorDivWidth;
-		$("showbox").style.display="block";
+		$id("showbox").style.display="block";
 		if(left>=rangeWidth){
 			left=rangeWidth;
 		}
@@ -38,16 +87,16 @@ function bigger(){
 		this.style.left=left+"px";
 		this.style.top=top+"px";
 		//展示盒子的移动
-		$("showimg").style.left=left*(-1.5)+"px";
-		$("showimg").style.top=top*(-1.5)+"px";
+		$id("showimg").style.left=left*(-1.5)+"px";
+		$id("showimg").style.top=top*(-1.5)+"px";
 	}
-	$("mirror").onmouseout=function(){
-		$("showbox").style.display="none";
+		$id("mirror").onmouseout=function(){
+		$id("showbox").style.display="none";
 	}
 }
 function change(i){
-		$("bigbox").style.backgroundImage=`url(../images/00${i}.jpg)`
-		$("showimg").style.backgroundImage=`url(../images/00${i}.jpg)`
+		$id("bigbox").style.backgroundImage=`url(../images/00${i}.jpg)`
+		$id("showimg").style.backgroundImage=`url(../images/00${i}.jpg)`
 	}
 function changeList(data){
 	var btn1=document.getElementsByClassName("btn");

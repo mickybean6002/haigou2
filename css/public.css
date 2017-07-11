@@ -148,7 +148,8 @@ a:hover{
 	background:#383838; 
 	right:0; 
 	top:0; 
-	padding:270px 0;}
+	padding:270px 0;
+	z-index:50;}
 #rightbar ul li{
 	border-bottom:1px solid #979797;}
 #rightbar ul li a{

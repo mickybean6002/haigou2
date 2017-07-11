@@ -16,18 +16,16 @@
 	}else{
 		//2)、执行SQL语句
 		mysql_select_db("haigou",$con);
-		$str="insert into userTable(userName,userPass,userPhone,userEmail,testCode) values('".$userName."','".$userPass."','".$userPhone."','".$userEmail."')";
+		$str="insert into userTable(userName,userPass,userPhone,userEmail) values('".$userName."','".$userPass."','".$userPhone."','".$userEmail."')";
 		$count = mysql_query($str,$con); 
-		
 		//3)、关闭数据库
 		mysql_close($con);
 		
 		//3、响应
 		if($count==1){
-			header("Refresh:0;url=../index.html");
-			
+			echo header("Refresh:0;url=../html/tiaozhuan.html");
 		}else{
 			echo "注册失败";
 		}
-	}	
+	}
 ?>

@@ -52,6 +52,8 @@
 #top #box2 ul li:first-child span{
 	background:#fff;
 	color:#c33;}
+#top #box2 ul li:first-child input{
+}
 #top #box2 ul li:first-child i{
 	display:block;
 	width:0;
@@ -106,25 +108,163 @@
 #top #box5 span:nth-child(6){
 	width:115px;}	
 	
+/*==============goodscart================*/
+#goodscart .demo{
+	overflow: hidden;
+	width:100%
+}
+#goodscart .demo .tips{
+	width: 100%;
+	height:20px;
+	margin-top: 20px;
+	padding-left:12px;
+	margin-bottom: 10px;
+}
+#goodscart .demo .tips input{
+	vertical-align: middle;
+}
+#goodscart .demo .tips img{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin:0 10px;
+}	
+#goodscart .demo .tips a{
+	font-size: 12px;
+}	
+#goodscart .demo ul li{
+	height:120px;
+	border: 1px solid #ccc;
+	padding:10px;
+}	
+#goodscart .demo ul li img{
+	width:80px;
+	height:80px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+#goodscart .demo ul li div{
+	display: inline-block;
+	vertical-align: middle;
+}	
+
+#goodscart .demo ul li div span{
+	display: inline-block;
+	vertical-align: middle;
+}
+#goodscart .demo ul li .detail p{
+	width:255px;
+	margin-right:310px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}	
 	
+#goodscart .demo ul li .detail p:nth-child(2) span{
+	margin:0 10px;
+}	
 	
+#goodscart .demo ul li span.value{
+	margin-bottom: 30px;
+	width:130px;
+}
 	
+#goodscart .demo ul li div.moreless{
+	width:80px;
+	height:28px;
+	margin:0 60px;
+}	
+#goodscart .demo ul li div.moreless .inleft,#goodscart .demo ul li div.moreless .inright{
+	width:18px;
+	height:28px;
+	text-align: center;
+	width: 18px;
+	line-height: 28px;
+	cursor: pointer;
+	background: #ddd;
+	border: 1px solid #ccc;
+}	
+#goodscart .demo ul li div.moreless .inmiddle{
+	width:42px;
+	height:28px;
+	border: 1px solid #000;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+}	
+#goodscart .demo ul li i{
+	display: inline-block;
+	font-style: normal;
+}
+
+#goodscart .demo ul li b{
+	display: inline-block;
+	font-weight: 100;
+	margin-left: 65px;
+}	
+
+/*==============bottom================*/
+#bottom{
+	position: fixed;
+	width:100%;
+	height:70px;
+	border:1px solid #ccc;
+	padding:0 20px;
+	bottom:0;
+	line-height:70px;
+	background: #fff;
+}
+
+#bottom input{
+	vertical-align: middle;
+	margin-right: 5px;
+}
 	
+#bottom span{
+	margin:0 20px;
+}	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+#bottom span:nth-child(5){
+	margin-left:700px;
+}
+
+#bottom span:nth-child(5) i{
+	margin:0 5px;
+	color: #CC3333;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#bottom b{
+	font-size: 18px;
+	color: #c33;
+}
+
+#bottom em{
+	display: inline-block;
+	height:68px;
+	width:100px;
+	color: #fff;
+	line-height: 68px;
+	text-align: center;
+	background: #ccc;
+	font-style: normal;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

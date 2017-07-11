@@ -1,5 +1,9 @@
 // JavaScript Document
 $(function(){
+	var strStoreDate = window.localStorage? localStorage.getItem("userName"): Cookie.read("userName");
+	$("#Login").html("<a href='#'>"+strStoreDate+"</a>");
+	$("#Register").html("");
+	
 	function GetRTime(){
 		var EndTime= new Date('2017/08/20 00:00:00');
 		var NowTime = new Date();

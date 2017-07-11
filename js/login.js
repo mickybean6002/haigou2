@@ -1,5 +1,10 @@
+
 // JavaScript Document
 $(function(){
+	$("#name").val(getinCookie("userName"));
+	$("#pass").val(getinCookie("userPass"));
+	
+	
 	$("#load").click(function(){
 		//1、
 		$.post(
@@ -11,7 +16,9 @@ $(function(){
 			function(data){					
 				if(data=="1"){//登录成功！
 					//记录cookie
-					//saveCookie("userName",$("#name").val(),7);
+					setCookie("userName",$("#name").val(),14);
+					setCookie("userPass",$("#pass").val(),14);
+					localStorage.setItem("userName",$('#name').val());
 					location.href="../index.html";
 				}else{
 					alert("登录失败，用户名或者密码不对！");
@@ -37,6 +44,21 @@ $(function(){
 
 })
 	
+function setCookie(keyname,keyvalue,time){
+	var date=new Date();
+	date.setDate(date.getDate()+time);
+	document.cookie=keyname+"="+keyvalue+";expires="+date.toGMTString();	
+}
+function getinCookie(key){
+		var arr1=document.cookie.split("; ");
+		for(var i in arr1){
+			var arr2=arr1[i].split("=");
+			if(arr2[0]==key){
+					return arr2[1];
+			}
+		}	
+}
+
 	
 	
 	

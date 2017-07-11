@@ -14,8 +14,8 @@
         	<div class="w">
             	<p class="l">Hi，欢迎来到洋码头</p>
                 <ul class="r">
-                	<li class="l"><a href="login.html">登录</a></li>
-                	<li class="l"><a href="register.html">注册</a></li>
+                	<li class="l"><a id="Login">登录</a></li>
+                	<li class="l"><a id="Register">注册</a></li>
                 	<li class="l"><a href="#">购物车</a></li>
                 	<li class="l"><a href="#">我的订单</a></li>
                 	<li class="l"><a href="#">个人中心</a></li>
@@ -130,10 +130,10 @@
 			<span> COSME大赏日本MINON氨基酸面膜贴补水保湿舒缓修护4片</span>
         </div>
     	<div class="bottom">
-        	<div class="left l">
-            	<div id="bigbox">
+        	<div class="left l" id="picturebigger">
+            	<!--<div id="bigbox">
                 	<div id="mirror"></div>
-                </div>
+             </div>-->
                 <div id="smallbox">
                 	<div class="outbox l">
                     	<div id="smallbox1" onclick="change(0)"></div>
@@ -145,18 +145,20 @@
                     	<div id="smallbox3" onclick="change(2)"></div>
                     </div>
                 </div>
-            	<div id="showbox">
+            	<!--<div id="showbox">
                 	<div id="showimg"></div>
-                </div>
+             </div>-->
             </div>
         	<div class="middle l">
-            	<div class="one">
-                	<h3>COSME大赏日本MINON氨基酸面膜贴补水保湿舒缓修护4片</h3>
+            	<div class="one" id="goodsname">
+                	<!--
+                    <h3>COSME大赏日本MINON氨基酸面膜贴补水保湿舒缓修护4片</h3>
                     <span>包邮包税</span>
+                    -->
                 </div>
-            	<div class="two">
-                	<p class="p1">价格:&nbsp;&nbsp; <span>¥89</span></p>
-                	<p class="p2">领券:&nbsp;&nbsp; <span>99-5</span><span>199-10</span><span>399-20</span></p>
+            	<div class="two" id="goodspirce">
+                	<!--<p class="p1">价格:&nbsp;&nbsp; <span>¥89</span></p>
+                	<p class="p2">领券:&nbsp;&nbsp; <span>99-5</span><span>199-10</span><span>399-20</span></p>-->
                 </div>
             	<div class="three">
                 	<p> 配送方式：<a href="#">拼邮</a></p>
@@ -168,7 +170,7 @@
                     	颜色分类：<span>SZ A0235</span><br/>
                         <div class="allinput">
                             数量：<input type="button" value="+"/>
-                            <input type="text" value="1"/>
+                            <input type="text" value="1" id="counts"/>
                             <input type="button" value="-"/>&nbsp;件 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剩余库存：56件
                         </div>
                     </div>
@@ -179,7 +181,7 @@
                         <span class="r">扫码
                         </span>
                     </div>
-                    <input type="button" value="加入购物车" class="l"/>
+                    <input type="button" value="加入购物车" class="l" id="addgoods"/>
                     <span class="l"></span>收藏商品
                 </div>
                 <div class="six">

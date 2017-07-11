@@ -1,11 +1,12 @@
 // JavaScript Document
 $(function(){
-	var isCheck=true;
+
+	var isCheck=[1,1,1,1,1,1];
 	$("#phone").blur(function(){
 		let result1=(/^1[34578]\d{9}$/).test($("#phone").val());
 		if(!result1){
 			$(".check").eq(0).html("请输入合法的手机号码");
-			isCheck=false;
+			isCheck[0]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
 			$(this).css("border","1px solid #dadada");
@@ -18,12 +19,12 @@ $(function(){
 					success:function(data){
 						if(data=="1"){
 							$(".check").eq(0).html("该手机号已经被注册了");
-							isCheck=false;
+							isCheck[0]=0;
 							$(this).css("border","1px solid #c33");							
 						}else{
-							$(".check").eq(0).html("");
+							$(".check").eq(0).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
 							$(this).css("border","1px solid #dadada");
-							isCheck=true;
+							isCheck[0]=2;
 						}
 					}		
 			});	
@@ -36,12 +37,12 @@ $(function(){
 		let result2=$("#code").html();
 		if(result2!=result1){
 			$(".check").eq(1).html("请输入正确的验证码");
-			isCheck=false;
+			isCheck[1]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
-			$(".check").eq(1).html("");
+			$(".check").eq(1).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
 			$(this).css("border","1px solid #dadada");
-			isCheck=true;
+			isCheck[1]=2;
 		}
 	})
 	
@@ -50,7 +51,7 @@ $(function(){
 		let result4=(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/).test($("#email").val());
 		if(!result4){
 			$(".check").eq(2).html("请输入合法邮箱");
-			isCheck=false;
+			isCheck[2]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
 			$(this).css("border","1px solid #dadada");
@@ -63,11 +64,11 @@ $(function(){
 				success:function(data){
 					if(data=="1"){
 						$(".check").eq(2).html("该邮箱已经被注册了");
-						isCheck=false;
+						isCheck[2]=0;
 						$(this).css("border","1px solid #c33");
 					}else{
-						$(".check").eq(2).html("");
-						isCheck=true;
+						$(".check").eq(2).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
+						isCheck[2]=2;
 						$(this).css("border","1px solid #dadada");
 					}
 				}		
@@ -80,11 +81,11 @@ $(function(){
 		let result5=(/^[a-z0-9_-]{6,18}$/).test($("#userpass1").val());
 		if(!result5){
 			$(".check").eq(3).html("请输入6-18位字母、数字或下划线");
-			isCheck=false;
+			isCheck[3]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
-			$(".check").eq(3).html("");
-			isCheck=true;
+			$(".check").eq(3).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
+			isCheck[3]=2;
 			$(this).css("border","1px solid #dadada");
 		}
 	})
@@ -95,11 +96,11 @@ $(function(){
 		let result6=$("#userpass2").val();
 		if(result6!=result5){
 			$(".check").eq(4).html("请保持两次输入的密码一致");
-			isCheck=false;
+			isCheck[4]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
-			$(".check").eq(4).html("");
-			isCheck=true;
+			$(".check").eq(4).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
+			isCheck[4]=2;
 			$(this).css("border","1px solid #dadada");
 
 		}
@@ -110,7 +111,7 @@ $(function(){
 		let result7=(/^\w{3,16}$/).test($("#username").val());
 		if(!result7){
 			$(".check").eq(5).html("请输入3-16位字母数字或下划线");
-			isCheck=false;
+			isCheck[5]=0;
 			$(this).css("border","1px solid #c33");
 		}else{
 			$(this).css("border","1px solid #dadada");
@@ -123,12 +124,12 @@ $(function(){
 				success:function(data){
 					if(data=="1"){
 						$(".check").eq(5).html("该用户名已经被注册了");
-						isCheck=false;
+						isCheck[5]=0;
 						$(this).css("border","1px solid #c33");
 
 					}else{
-						$(".check").eq(5).html("");
-						isCheck=true;
+						$(".check").eq(5).html("<img src='../images/right.png' style='width:15px;height:15px;display:inline-block;vertical-align:middle;margin-left:20px;'/>");
+						isCheck[5]=2;
 						$(this).css("border","1px solid #dadada");
 
 					}
@@ -138,8 +139,8 @@ $(function(){
 		}
 	})
 	
-	$("#zhuce").submit(function(){
-		if(isCheck==false){
+	$("form").submit(function(){
+		if(isCheck!=[2,2,2,2,2,2]){
 			return false;
 		}
 	})
@@ -154,26 +155,6 @@ $(function(){
 		var num="";
 		for(var i=0;i<4;i++){
 			num+=parseInt(Math.random()*10)
-			/*$.ajax({
-				url:"../php/regCheck.php",
-				async:true,
-				data:"userName="+this.value,
-				type:"get",
-				success:function(data){
-					if(data=="1"){
-						$(".check").eq(5).html("该用户名已经被注册了");
-						isCheck=false;
-						$(this).css("border","1px solid #c33");
-
-					}else{
-						$(".check").eq(5).html("");
-						isCheck=true;
-						$(this).css("border","1px solid #dadada");
-
-					}
-					
-				}		
-			});	*/
 		}
 		$("#code").html(num);
 	})

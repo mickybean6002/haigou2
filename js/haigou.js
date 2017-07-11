@@ -1,4 +1,19 @@
 	$(function(){
+	var strStoreDate = window.localStorage? localStorage.getItem("userName"): Cookie.read("userName");
+	$("#Login").html("<a href='#'>"+strStoreDate+"</a>");
+	$("#Register").html("");
+	/*注销
+	$("#delete").click(function(){
+		var storage=window.localStorage;
+            storage.a=1;
+            storage.setItem("name",3);
+            storage.clear();
+        	location.href="index.html";
+		if(strStoreDate==null){
+			$("#Login").html("<a href='html/login.html'>登录</a>");
+			$("#Register").html("<a href='html/register.html'>注册</a>");
+		}
+	})*/
 		function GetRTime(){
 			var EndTime= new Date('2017/08/20 00:00:00');
 			var NowTime = new Date();
