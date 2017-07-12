@@ -34,6 +34,9 @@ a:hover{
 #box1{
 	height:30px; 
 	background:#f8f8f8;}
+#box1 ul #user{
+	display:none;
+}
 #box1 p{
 	height:30px; 
 	line-height:30px; 

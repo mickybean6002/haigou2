@@ -140,8 +140,10 @@ $(function(){
 	})
 	
 	$("form").submit(function(){
-		if(isCheck!=[2,2,2,2,2,2]){
-			return false;
+		for(let i=0;i<isCheck.length;i++){
+			if(isCheck[i]!=2){
+				return false;
+			}
 		}
 	})
 	

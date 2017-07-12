@@ -1,7 +1,10 @@
 	$(function(){
 	var strStoreDate = window.localStorage? localStorage.getItem("userName"): Cookie.read("userName");
-	$("#Login").html("<a href='#'>"+strStoreDate+"</a>");
-	$("#Register").html("");
+	$("#Login").css("display","none");
+	$("#Register").css("display","none");
+	$("#user").css("display","block");
+	$("#user").html("<a href='#'>"+strStoreDate+"</a>");
+	
 	/*注销
 	$("#delete").click(function(){
 		var storage=window.localStorage;

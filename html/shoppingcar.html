@@ -44,9 +44,9 @@
             </div>
         </div>
 </div>
-<div id="goodscart">
-	<div class="w">
-		<div class="demo">
+<div >
+	<div class="w" id="goodscart">
+		<!--<div class="demo">
 			<div class="tips">
 				<input type="checkbox"/><a href="#"><img src="../images/CgvUA1eHhNWAb104AABfoHhtyNE159_m.jpg"/>假一赔万</a><a href="#"><img src="../images/Canada.png"/>加拿大</a>
 			</div>
@@ -68,7 +68,7 @@
 					<b>删除</b>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 	</div>
 </div>
 
@@ -78,7 +78,7 @@
 	<span>删除选中商品</span>
 	<span>删除全部失效商品</span>
 	<span>已选<i>0</i>件商品，总价</span>
-	<b>￥1980.00</b>
+	<b id="account">￥1980.00</b>
 	<em class="r">结算</em>
 </div>
 
@@ -189,6 +189,80 @@
 </div>
 </body>
 <script>
+	var strStoreDate = window.localStorage?localStorage.getItem("userName"): Cookie.read("userName");
+	$(function(){
+		
+		$.ajax({
+				url:"../php/getShoppingCart.php",
+				async:true,
+				data:"vipName="+strStoreDate,
+				type:"get",
+				dataType:"json",
+				success:function(data){
+					let obj=data;
+					for(var i=0;i<data.length;i++){
+						let goodsId=obj[i].goodsId;
+						let goodsImg=obj[i].goodsImg;
+						let goodsName=obj[i].goodsName;
+						let goodsPrice=obj[i].goodsPrice;
+						let goodsType=obj[i].goodsType;
+						let beiyong1=obj[i].beiyong1;
+						let beiyong2=obj[i].beiyong2;
+						let goodsCount=obj[i].goodsCount;
+						let str="<div class='demo'><div class='tips'><input type='checkbox'/><a href='#'><img src='../images/CgvUA1eHhNWAb104AABfoHhtyNE159_m.jpg'/>"+beiyong1+"</a><a href='#'><img src='../images/Canada.png'/>"+beiyong2+"</a></div><ul><li><input type='checkbox' class='l'/><img src='"+goodsImg+"'/><div class='detail'><p><span>"+goodsType+"</span>"+goodsName+"</p><p><span>第三方直邮</span><span>本土退货</span></p></div><span class='value'>"+goodsPrice+"</span><div class='moreless'><input type='button' value='+' class='inleft l'/><input type='text' value='"+goodsCount+"' class='inmiddle l'/><input type='button' value='-' class='inright l'/></div><i>"+goodsPrice*goodsCount+"</i><b onclick='deleteTarget("+goodsId+")'>删除</b></li></ul></div>";
+						console.log(str);
+						$("#goodscart").append(str);
+					
+				}	
+		$(".moreless input:nth-child(1)").click(function(){	
+			$(this).next().val(parseInt($(this).next().val())+1);
+			$(this).parent().next().html($(this).next().val()*$(this).parent().prev().html());
+			allPrice();
+		})
+		
+		$(".moreless input:nth-child(3)").click(function(){	
+			$(this).prev().val($(this).prev().val()-1);
+			if($(this).prev().val()<=0){
+				$(this).prev().val(0);
+				allPrice();
+			}
+	$(this).parent().next().html($(this).prev().val()*$(this).parent().prev().html());
+	
+	
+		})
+			allPrice();
+		}
+		
+	});//ajax
+	
+})
+	
+		function deleteTarget(goodsId){
+			$.ajax({
+				url:"../php/deleteGoods.php",
+				async:true,
+				data:"goodsId="+goodsId+"&vipName="+strStoreDate,
+				type:"get",
+				success:function(data){
+					if(data==1){
+						alert("删除成功");
+					}else{
+						alert("删除失败");
+					}
+				}		
+			});
+			location=location;
+		}
+		
+		//有问题 待修正
+		function allPrice(){
+			let account=0;
+			for(let i=0;i<$(".inright").length;i++){
+				 account+=parseInt($(".inright")[i].innerHTML);
+			}
+			$("#account").html(account);
+		}
+
 </script>
 </html>
 

@@ -36,7 +36,6 @@ var strStoreDate1= window.localStorage? localStorage.getItem("goodsId"): Cookie.
 				async:true,
 				data:"goodsId="+strStoreDate1+"&vipName="+strStoreDate+"&goodsCount="+counts,
 				type:"get",
-				dataType:"json",
 				success:function(data){
 					if(data==1){
 						alert("添加成功");
@@ -45,8 +44,6 @@ var strStoreDate1= window.localStorage? localStorage.getItem("goodsId"): Cookie.
 					}
 				}		
 			});	
-
-		
 	}
 	
 	
